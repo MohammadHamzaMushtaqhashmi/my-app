@@ -25,4 +25,4 @@ jobs:
       - name: install surge
         run: npm install --global surge
       - name: Run surge
-        run: surge ./build http://bootcamp_haMzamushtaq.surge.sh/ --token ${{secrets.bootcamp_surge_token}}
+        run: surge ./build http://bootcamp_haMzamushtaq.surge.sh/ --token ${{secrets.bootcamp-surge-token}}
