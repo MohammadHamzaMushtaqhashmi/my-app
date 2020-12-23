@@ -24,5 +24,5 @@ jobs:
           node-version: ${{ matrix.node-version }}       
       - name: install surge
         run: npm install --global surge
-      - name: Deploying using surge
+      - name: Run surge
         run: surge ./build http://bootcamp_class2_haMza.surge.sh/ --token ${{secrets.BOOTCAMP_SURGE_TOKEN}}
