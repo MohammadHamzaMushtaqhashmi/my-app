@@ -1,14 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: bootcamp-practice2020
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  # Allows you to run this workflow manually from the Actions tab
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -20,17 +18,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.3
-        with:
-          version: 14.15.1
       - name: Install Node.js
         uses: actions/setup-node@v2-beta
         with:
-          node-version: 14.15.1         
-      - name: Build react app
-        run: npm run build
+          node-version:12       
       - name: install surge
         run: npm install --global surge
-      - name: Deploying react app to surge
+      - name: Deploying using surge
         run: surge ./build http://bootcamp_class2_haMza.surge.sh/ --token ${{secrets.BOOTCAMP_SURGE_TOKEN}}
