@@ -37,4 +37,4 @@ jobs:
     - name: installing surge  
       run: npm install -g surge
     - name: deploying on surge
-      run:  surge ./build http://bootcamp_haMzamushtaq.surge.sh/ --token ${{secrets.bootcamp-surge-token}}
+      run:  surge ./build http://erect-egg.surge.sh/ --token ${{secrets.bootcamp-surge-token}}
